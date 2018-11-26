@@ -1,2 +1,2 @@
-# bangledank-creamybuilt
-A Benedict Cumberbatch name generator
+# Bangledank Creamybuilt
+A Benedict Cumberbatch name generator.
