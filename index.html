@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	
+	<title id="title">Benedict Cumberbatch</title>
+	
+	<style>
+		
+		.center {
+			height: 90vh;
+			
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		body {
+			font-family: Sans-Serif;
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+	
+	<div class="center">
+		<h2><span id="number"></span> combinations!!!</h2>
+		
+		<button onclick="setName()">Generate</button>
+		
+		<p id="output">Benedict Cumberbatch</p>
+	</div>
+	
+	<script>
+		
+		const title = document.getElementById("title");
+		const number = document.getElementById("number");
+		const output = document.getElementById("output");
+		
+		const bene = [
+			"Bendy",
+			"Barney",
+			"Brandy",
+			"Bangle",
+			"Buckle",
+			"Burly",
+			"Binder",
+			"Balmy",
+			"Bungle",
+			"Briny",
+			"Bulky",
+			"Babel",
+		];
+		const dict = [
+			"dish",
+			"wick",
+			"dank",
+			"dark",
+			"dung",
+			"dock",
+			"deck",
+			"sect",
+			"fish",
+			"ditch",
+			"kicked",
+		];
+		const cumber = [
+			"Blunder",
+			"Karma",
+			"Dumber",
+			"Cabbage",
+			"Creamy",
+			"Crumbly",
+			"Critter",
+			"Curry",
+			"Country",
+			"Cucumber",
+			"Encumber",
+			"Slumber",
+		];
+		const batch = [
+			"built",
+			"latch",
+			"thatch",
+			"snatch",
+			"match",
+			"patch",
+			"bark",
+			"sash",
+			"thrash",
+			"beach",
+			"catch",
+			"mash",
+			"bath",
+			"bash",
+		];
+		
+		// add 1 because there's a chance of getting "Benedict Cumberbatch"
+		number.textContent = bene.length * dict.length * cumber.length * batch.length + 1;
+		
+		function randomElement(array) {
+			index = Math.floor(Math.random() * array.length);
+			
+			return array[index];
+		}
+		
+		function generate() {
+			// 1 in 2000 chance of getting "Benedict Cumberbatch"
+			if (Math.random <= 0.0005) {
+				return "Benedict Cumberbatch";
+			} else {
+				return randomElement(bene) + randomElement(dict) + " " + randomElement(cumber) + randomElement(batch);
+			}
+		}
+		
+		function setName() {
+			var name = generate();
+			
+			title.textContent = name;
+			output.textContent = name;
+		}
+		
+	</script>
+	
+</body>
+
+</html>
